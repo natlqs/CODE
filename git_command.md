@@ -37,6 +37,11 @@ git checkout master         // 切换到master分支下
 git merge xx                // 将xx分支合并到master分支
 
 
+### 拉取远程仓库
 
+git pull                // == git fetch + git merge 当本地的落后于线上仓库时，使用此命令
 
+git fetch               //获取到线上仓库的更新
+
+git merge               //合并分支到主干
 
