@@ -1,0 +1,163 @@
+### 异常与处理
+异常：程序代码语法编写没有错误，但是程序在逻辑上存在错误。Bug
+
+**例1**
+
+```C#
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 8;
+            int num2 = 2;
+            try  //尝试捕获异常，如果没有异常，则执行try里的内容
+            {
+                int num3 = num1 / num2;
+                Console.WriteLine(num3);
+            }
+            catch  // 如果发生了异常，就执行catch里的内容
+            {
+                Console.WriteLine("0不能是除数");
+            }
+            finally
+            {
+                Console.WriteLine("计算结束!");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+**例2**	从键盘录入一个数，如果是数字就输出数字的 平方，如果不是就提示输入的不是数字。
+
+```C#
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine("从键盘录入一个数：");
+                string str = Console.ReadLine();
+                try
+                {
+                    int num = Convert.ToInt32(str);//异常
+                    Console.WriteLine("平方是" + num * num);
+                }
+                catch 
+                {
+                    Console.WriteLine("你输入的不是数字！");
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+**例3** 从键盘上输入两个数字，然后计算这两个数字之间所有整数的和；
+
+- 用户只能输入数字；
+- 要求第一个数字必须比第二个数字小，否则重新输入；
+- 额外要求：输出两个数字之间有多少个整数。
+
+```c#
+namespace 双数之和
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            tishi(1);
+            string strNum1 = input();
+            //调用一个方法 --- 数据类型的转换
+            int n1 = GetNum(strNum1);
+            tishi(2);
+            string strNum2 = input();
+            int n2 = GetNum(strNum2);
+            //调用方法
+            //判断大小
+            JudgeNum(ref n1, ref n2);
+            //求和
+            GetSum(n1, n2);
+            //求整数
+            GetCount(n1, n2);
+            Console.ReadKey();
+        }
+
+        static void GetCount(int n1, int n2)
+        {
+            Console.WriteLine("{0}到{1}之间有{2}个整数！", n1, n2, (n2 - n1 - 1));
+
+        }
+        static void GetSum(int n1, int n2)
+        {
+            int sum = 0;
+            for (int i = n1; i<=n2; i++)
+            {
+                sum = sum + i;
+            }
+            Console.WriteLine("从{0}到{1}的和是: {2}", n1, n2, sum);
+        }
+
+        static void JudgeNum(ref int n1, ref int n2)
+        {
+            while (true)
+            {
+                if (n1 < n2)
+                {
+                    //符合题意
+                    return;
+                }
+                else // n1>n2
+                {
+                    Console.WriteLine("你输入的第1个数不能大于或等于2个数，请重新输入第1个数！");
+                    string s1 = input();
+                    n1 = GetNum(s1);
+                    Console.WriteLine("你输入的第1个数不能大于或等于2个数，请重新输入第2个数！");
+                    string s2 = input();
+                    n2 = GetNum(s2);
+                }
+            }
+        }
+        static int GetNum(string s)
+        {
+            while (true)
+            {
+                //异常
+                try
+                {
+                    int number = Convert.ToInt32(s);
+                    return number;
+                }
+                catch
+                {
+                    Console.WriteLine("输入错误！请重新输入数字：");
+                    s = input();
+                }
+            }
+        }
+        static string input()
+        {
+            return Console.ReadLine();
+        }
+
+        static void tishi(int i)
+        {
+            Console.WriteLine("请输入第{0}个数字：",i);
+        }
+    }
+}
+```
+
+
+
+
+
+
+
