@@ -157,6 +157,110 @@ namespace 双数之和
 
 
 
+### 面向对象程序设计
+
+#### 面向对象的概念
+
+**对象**：能够被计算机处理的信息，在现实生活中能被抽象感知的物品。有效信息的被动发生。
+
+**对象的行为**： 对象所能执行的动作和功能
+
+**对象的属性**：描述对象的外貌特征和状态
+
+#### 类和对象
+
+**类的概念**：类（class）表示对现实世界中一类具有共同特征的事物的抽象，实际上是对某种类型的**对象**定义变量和方法的原型（模板）
+
+##### 类的定义
+
+```C#
+namespace 射击游戏
+{
+    public class player
+    {
+        //属性 -- 字段 --变量
+        public string name;
+        public int hp;//HP 生命值
+        //行为 -- 方法 --函数
+        public void shoot(int shanghai)
+        {
+            hp = hp - shanghai;//中弹
+            if (hp <=0)
+            {
+                Console.WriteLine("死亡");
+            }
+            else
+            {
+                Console.WriteLine("未死亡");
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //生成两个玩家，+ 自己 = 3个人
+            //由类生成对象的过程
+            player p1 = new player(); //生成了p1
+            player p2 = new player();   //生成了p2
+            //p1 和p2就是两个对象
+            p1.name = "dabai";
+            p1.hp = 100;
+            p2.name = "xiaobai";
+            p2.hp = 60;
+
+            Console.WriteLine("游戏开始！");
+            Console.WriteLine("现在有2个玩家： ");
+            // 选枪
+            Console.WriteLine("1 ----> AKM,  伤害是：50");
+            Console.WriteLine("2 ----> M416, 伤害是：70");
+            Console.WriteLine("3 ----> 98K,  伤害是：120");
+            Console.WriteLine("你要用什么武器打他？");
+            int hurt;
+            string strArms = Console.ReadLine();
+            if (strArms == "1")
+            {
+                Console.WriteLine("当前武器是：AKM");
+                hurt = 50;
+            }
+            else if (strArms == "2")
+            {
+                Console.WriteLine("当前武器是：M416");
+                hurt = 70;
+            }
+            else if (strArms == "3")
+            {
+                Console.WriteLine("当前武器是：98K");
+                hurt = 120;
+            }
+            else
+            {
+                Console.WriteLine("选择错误！");
+                hurt = 0;
+            }
+            Console.WriteLine("玩家1的名字是：{0}， 生命值是：{1}", p1.name, p1.hp);
+            Console.WriteLine("玩家2的名字是：{0}， 生命值是：{1}", p2.name, p2.hp);
+            Console.Write("你要打谁？");
+            string str = Console.ReadLine();
+            int i = Convert.ToInt32(str);
+            if (str == "1")//打1
+            {
+                Console.WriteLine("现在要打" + p1.name);
+                p1.shoot(hurt);//p1被打了一枪
+            }
+            else//打2
+            {
+                Console.WriteLine("现在要打" + p2.name);
+                p2.shoot(hurt);//p2被打了一枪
+            }
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+
+
 
 
 
