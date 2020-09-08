@@ -24,3 +24,34 @@ PLC可以连接以下模块：
 
 #### 硬件配置
 
+#### 归档和恢复
+
+#### 编程语言种类
+
+**IEC61131-3**
+
+-   [指令表](https://baike.baidu.com/item/指令表)（Instruction List Diagram，ILD）
+-   阶梯图（Ladder Diagram，LD）
+-   [功能区块图](https://baike.baidu.com/item/功能区块图)（Function Block Diagram，FBD）
+-   结构化文字（Structured Text Language，STL）
+-   [顺序功能流程图](https://baike.baidu.com/item/顺序功能流程图)（Sequential Function Chart，SFC）
+
+#### OB - program cycle OB1
+
+循环调用，程序运行过程中以一定周期不停的调用。
+
+#### OB - Startup OB100
+
+启动时调用一次此块，并执行内部程序。
+
+#### OB Cyclic interrupt 循环中断 OB30
+
+定期启动该循环块中的程序，无需执行循环程序。可以在对话框或该OB属性中定义时间间隔。
+
+#### 函数 - FC
+
+函数是没有专用存储区的代码块
+
+#### 数据块 - DBs
+
+#### 功能块 - FBs
