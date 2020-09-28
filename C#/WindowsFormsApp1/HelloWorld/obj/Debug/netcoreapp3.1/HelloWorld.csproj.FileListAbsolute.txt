@@ -1,0 +1,13 @@
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.exe
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.deps.json
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.runtimeconfig.json
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.runtimeconfig.dev.json
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.dll
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.pdb
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.csprojAssemblyReference.cache
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.AssemblyInfoInputs.cache
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.AssemblyInfo.cs
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.csproj.CoreCompileInputs.cache
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.dll
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.pdb
+Z:\01_Data\CODE\C#\WindowsFormsApp1\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.genruntimeconfig.cache
