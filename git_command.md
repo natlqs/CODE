@@ -45,6 +45,7 @@ git fetch               //获取到线上仓库的更新
 
 git merge               //合并分支到主干
 
+
 ### VS CODE 连接到Github
 1. 安装GIT
 2. 终端中输入命令：`git config --global user.name "natlqs"`
