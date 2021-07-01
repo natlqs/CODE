@@ -36,6 +36,9 @@ git checkout master         // 切换到master分支下
 
 git merge xx                // 将xx分支合并到master分支
 
+### 添加远程仓库  
+
+git remote add [shortname] [url]
 
 ### 拉取远程仓库
 
